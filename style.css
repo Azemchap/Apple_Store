@@ -118,13 +118,16 @@ hr {
   flex: 50% 0 0;
 }
 
-.product_img img {
-  width: 100%;
-  max-height: 320px;
+.product_img {
+  background-image: url('./images/tech.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 200px;
 }
 
 .product_text {
-  padding: 0px 15px;
+  padding: 0px 30px;
 }
 
 .product_text h1 {
@@ -157,13 +160,42 @@ hr {
   padding: 20px 0px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
+  .product:first-child,
   .product {
+    padding: 30px 0px;
+  }
+  .product {
+    display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
+  }
+  .product_nav {
+    flex-direction: row;
   }
   .product_img {
-    margin-top: 30px;
+      margin-top: 30px;
+  }
+  .product_text {
+  padding: 0px;
+}
+}
+
+@media (max-width: 320px) {
+  .product:first-child,
+  .product {
+    padding: 30px 0px;
+  }
+  .product_text h1 {
+    font-size: 30px;
+  }
+  .product_text h2 {
+    font-size: 15px;
+  }
+  .product_text p {
+    font-size: 12px;
+  }
+  .product_nav li a {
+    font-size: 10px;
+    padding: 4px 8px;
   }
 }
